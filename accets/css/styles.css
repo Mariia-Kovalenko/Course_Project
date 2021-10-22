@@ -21,7 +21,8 @@ body{
 
 
 .describ { 
-    position: relative;
+    /* position: relative; */
+    display: flex;
 }
 .describ__content { 
     max-width: 550px;
@@ -59,32 +60,83 @@ body{
     background-color: #F6F1A7;
 }
 
-/* .describ__parallax{
-    animation-name: move;
-} */
+.describ__parallax{
+   
+}
 .parallax__layer{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 100;
+    
 }
 .parallax__layer img{
+    position: absolute;
+    top: 50px;
+    right: 30px;
     object-fit: cover;
 }
+.stars{
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.rocket{
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation-delay: 2s; */
+}
 .main__manual { }
-.manual { }
-.manual__name { }
-.name { }
+.manual { 
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+.manual__name { 
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.manual__name > * {
+    margin-right: 15px;
+}
+.name { 
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: white;
+}
 .manual__points { 
     display: flex;
+    margin: 0 -48px;
 }
-.manual__point { }
+.manual__point { 
+    margin: 0 24px;
+}
 
-/* @keyframes move{
+@keyframes move{
     0%{
-        top: 0;
+        right: 30px;
+        top: 50px;
     }
     100%{
-        top: 20px;
+        right: 40px;
+        top: 60px;
     }
-} */
+}
+@keyframes fly{
+    0%{
+        top: 40px;
+        right: 20px;
+    }
+    100%{
+        top: 0px;
+        right: 10px ;
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .parallax__layer{
+        z-index: -1;
+    }
+}
