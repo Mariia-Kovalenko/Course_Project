@@ -44,10 +44,12 @@ body{
     letter-spacing: 0.015em;
 }
 .describ__button { 
+    text-decoration: none;
     background-color: #F2EA7E;
     font-weight: 600;
     font-size: 16px;
     color: #0D0D0D;
+    padding: 20px 40px;
 }
 .btn { 
     width: 250px;
@@ -112,6 +114,11 @@ body{
 }
 .manual__point { 
     margin: 0 24px;
+    display: flex;
+    align-items:flex-start;
+}
+.manual__point img{
+    margin-right: 20px;
 }
 
 @keyframes move{
