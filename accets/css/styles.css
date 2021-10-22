@@ -1,0 +1,90 @@
+@import "null.css";
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #170E28;
+    color: #FFEDED;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header{
+    height: 70px;
+    padding: 15px 0;
+}
+
+.main { }
+.main__container { }
+
+
+.describ { 
+    position: relative;
+}
+.describ__content { 
+    max-width: 550px;
+    margin-top: 50px;
+}
+.describ__content > *:not(:last-child){
+    margin-bottom: 40px;
+}
+.describ__heading { }
+.heading { 
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+}
+.describ__text { 
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.015em;
+}
+.describ__button { 
+    background-color: #F2EA7E;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0D0D0D;
+}
+.btn { 
+    width: 250px;
+    height: 55px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #F6F1A7;
+}
+
+/* .describ__parallax{
+    animation-name: move;
+} */
+.parallax__layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+.parallax__layer img{
+    object-fit: cover;
+}
+.main__manual { }
+.manual { }
+.manual__name { }
+.name { }
+.manual__points { 
+    display: flex;
+}
+.manual__point { }
+
+/* @keyframes move{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 20px;
+    }
+} */
