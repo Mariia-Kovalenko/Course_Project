@@ -4,44 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs Test</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="/accets/css/test.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/accets/css/styles.css">
+   
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="header__container container">
-                <div class="header__logo logo">
-                    <a href="index.html" class="logo__image">
-                        <img src="/accets/images/logo.png" alt="logo">
-                    </a>
+        <div class="container">
+            <h1 id="heading">Test for your future career</h1>
+            <div id="question-container" class ="hide">
+                <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn btn-yes">default-1</button>
+                    <button class="btn btn-no">default-2</button>
                 </div>
             </div>
-        </header>
-
-        <main class="main">
-            <div class="main__container container">
-                <div class="main__describtion describ">
-                    <div class="describ__content">
-                        <div class="describ__heading heading">
-                            Профорієнтаційний тест
-                        </div>
-
-                    </div>
-                    <div class="describ__parallax">
-                        <div class="parallax__layer">
-                            <img class="stars" src="/accets/images/stars.png" alt="stars">
-                        </div>
-                        <div class="parallax__layer">
-                            <img class ="rocket" src="/accets/images/rocket.png" alt="rocket">
-                        </div>
-                    </div>
-                </div>
-
-
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+                <button id="complete-btn" class="complete-btn btn hide">Complete</button>
             </div>
-        </main>
+        </div>
     </div>
 </body>
+<script src="/js/main.js"></script>
 </html>
