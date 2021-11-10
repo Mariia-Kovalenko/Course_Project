@@ -253,9 +253,9 @@ function showQuestion(question){
         button.innerText = answer.text;
 
         button.classList.add('btn');
-        if(answer.text == 'Yes'){
+        if(answer.text == 'Так'){
             button.classList.add('btn-yes');
-        } else if (answer.text == 'No'){
+        } else if (answer.text == 'Ні'){
             button.classList.add('btn-no');
         }
         if(answer.points){
@@ -533,11 +533,11 @@ const questions =[
         clasification: "Visualisation",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -547,7 +547,7 @@ const questions =[
         clasification: "Imagination",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
@@ -561,11 +561,11 @@ const questions =[
         clasification: "Creativity",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -575,11 +575,11 @@ const questions =[
         clasification: "Logic",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -589,11 +589,11 @@ const questions =[
         clasification: "Maths",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -603,11 +603,11 @@ const questions =[
         clasification: "Team",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -617,11 +617,11 @@ const questions =[
         clasification: "Communication",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -631,11 +631,11 @@ const questions =[
         clasification: "Analytics",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -645,11 +645,11 @@ const questions =[
         clasification: "Motivation",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -659,11 +659,11 @@ const questions =[
         clasification: "Ethic",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -673,11 +673,11 @@ const questions =[
         clasification: "CompTech",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -687,11 +687,11 @@ const questions =[
         clasification: "Focus",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -701,11 +701,11 @@ const questions =[
         clasification: "CompSciense",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -715,11 +715,11 @@ const questions =[
         clasification: "Persistance",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -729,11 +729,11 @@ const questions =[
         clasification: "Testing",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -743,11 +743,11 @@ const questions =[
         clasification: "Troubleshooting",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -757,11 +757,11 @@ const questions =[
         clasification: "BigData",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -771,11 +771,11 @@ const questions =[
         clasification: "Puzzles",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -785,11 +785,11 @@ const questions =[
         clasification: "DataAnaliz",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -799,11 +799,11 @@ const questions =[
         clasification: "CompSystems",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
@@ -813,11 +813,11 @@ const questions =[
         clasification: "OperatingSystems",
         answers: [
             {
-                text: 'Yes', 
+                text: 'Так', 
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]
