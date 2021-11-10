@@ -284,7 +284,7 @@ function selectAnswer(e){
     if(shuffledQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide');
     }else{
-        completeButton.innerText = 'Complete';
+        completeButton.innerText = 'Завершити';
         completeButton.classList.remove('hide');
         // startButton.innerText = 'Restart';
         // startButton.classList.remove('hide');
@@ -551,7 +551,7 @@ const questions =[
                 points: 1,
             },
             {
-                text: 'No', 
+                text: 'Ні', 
                 points: 0,
             }
         ]

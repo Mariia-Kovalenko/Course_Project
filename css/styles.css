@@ -31,7 +31,12 @@ body{
 .describ__content > *:not(:last-child){
     margin-bottom: 40px;
 }
-.describ__heading { }
+.describ__heading { 
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 59px;
+    margin-bottom: 30px;
+}
 .heading { 
     font-weight: 600;
     font-size: 48px;
@@ -143,6 +148,9 @@ body{
 }
 
 @media screen and (max-width: 1090px){
+    .describ__parallax{
+        display: none;
+    }
     .parallax__layer{
         z-index: -1;
     }
