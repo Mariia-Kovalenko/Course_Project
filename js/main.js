@@ -513,6 +513,7 @@ function calculatePoints(){
         console.log(`Points for profession ${profession.profession}: ${profession.score}`);
     });
     sortProfessions();
+    window.location.href = 'progressring.html';
 }
 
 function sortProfessions(){
