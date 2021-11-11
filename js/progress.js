@@ -15,8 +15,14 @@ function setProgress(percent){
     percentage.innerHTML = `${percent}%`;
 }
 
-function createCircle(){
-    const circle = document.createElement('div');
-    
+function setProgress2(percent, circleItem, percentageItem){
+    const offset = circumference - percent / 100 * circumference;
+    circleItem.style.strokeDashoffset = offset;
+    percentageItem.innerHTML = `${percent}%`;
 }
+
+// function createCircle(){
+//     const circle = document.createElement('div');
+    
+// }
 setProgress(75);

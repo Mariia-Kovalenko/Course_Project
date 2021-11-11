@@ -1,5 +1,6 @@
 "use strict";
 
+
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const completeButton = document.getElementById('complete-btn');
@@ -7,6 +8,9 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonElement  = document.getElementById('answer-buttons');
 const headingElement = document.getElementById('heading');
+const results = document.querySelectorAll('.percentage');
+const resultRing = document.querySelectorAll('progect-ring__circle');
+
 
 let shuffledQuestions; 
 let currentQuestionIndex;
@@ -512,20 +516,32 @@ function calculatePoints(){
         profession.score += sum;
         console.log(`Points for profession ${profession.profession}: ${profession.score}`);
     });
-    sortProfessions();
-    window.location.href = 'progressring.html';
+
+    showResults(professions);
+    // sortProfessions();
 }
 
 function sortProfessions(){
     let maxScore = professions[0].score;
-    let yourProfession = "";
+    // let yourProfession = "";
     professions.forEach((item)=>{
         if(item.score > maxScore) {
             maxScore = item.score;
         }
-        yourProfession = item.profession;
+        //yourProfession = item.profession;
     });
-    console.log(`Your profession is ${yourProfession} with points ${maxScore}`);
+    //console.log(`Your profession is ${yourProfession} with points ${maxScore}`);
+}
+
+
+function showResults(professions){
+    window.location.href = 'results.html';
+    professions.forEach((profession) => {
+        for(let i = 0; i < results.length; i++){
+            //setProgress2(professions.score, results[i], resultRing[i]);
+        }
+    });
+
 }
 
 const questions =[

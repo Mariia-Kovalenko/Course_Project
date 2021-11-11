@@ -61,6 +61,9 @@ body{
     height: 55px;
     border-radius: 5px;
     transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn:hover{
     cursor: pointer;
