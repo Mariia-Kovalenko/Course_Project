@@ -1,28 +1,20 @@
 "use strict";
 
-const circle = document.querySelector('.progect-ring__circle');
-const percentage = document.querySelector('.percentage');
+const circle = document.querySelectorAll('.progect-ring__circle');
+const percentage = document.querySelectorAll('.percentage');
 const circleContainer = document.querySelector('.container');
-const radius = circle.r.baseVal.value;
+const radius = 30;
+// const radius = circle.r.baseVal.value;
 const circumference = 2* Math.PI * radius;
 
-circle.style.strokeDasharray = `${circumference} ${circumference}`;
-circle.style.strokeDashoffset = circumference;
-
-function setProgress(percent){
-    const offset = circumference - percent / 100 * circumference;
-    circle.style.strokeDashoffset = offset;
-    percentage.innerHTML = `${percent}%`;
+for(let i = 0; i < circle.length; i++){
+    //console.log(circle.item(i));
+    circle.item(i).style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.item(i).style.strokeDashoffset = circumference;
 }
 
-function setProgress2(percent, circleItem, percentageItem){
+function setProgress(index, percent){
     const offset = circumference - percent / 100 * circumference;
-    circleItem.style.strokeDashoffset = offset;
-    percentageItem.innerHTML = `${percent}%`;
+    circle.item(index).style.strokeDashoffset = offset;
+    percentage.item(index).innerHTML = `${percent}%`;
 }
-
-// function createCircle(){
-//     const circle = document.createElement('div');
-    
-// }
-setProgress(75);

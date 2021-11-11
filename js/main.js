@@ -1,6 +1,5 @@
 "use strict";
 
-
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const completeButton = document.getElementById('complete-btn');
@@ -8,8 +7,6 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonElement  = document.getElementById('answer-buttons');
 const headingElement = document.getElementById('heading');
-const results = document.querySelectorAll('.percentage');
-const resultRing = document.querySelectorAll('progect-ring__circle');
 
 
 let shuffledQuestions; 
@@ -516,10 +513,11 @@ function calculatePoints(){
         profession.score += sum;
         console.log(`Points for profession ${profession.profession}: ${profession.score}`);
     });
-
-    showResults(professions);
-    // sortProfessions();
+    
+    setProgress(0, professions[0].score);
 }
+
+
 
 function sortProfessions(){
     let maxScore = professions[0].score;
@@ -534,15 +532,12 @@ function sortProfessions(){
 }
 
 
-function showResults(professions){
-    window.location.href = 'results.html';
-    professions.forEach((profession) => {
-        for(let i = 0; i < results.length; i++){
-            //setProgress2(professions.score, results[i], resultRing[i]);
-        }
-    });
+// function showResults(professions){
+//     window.location.href = 'results.html';
+//     professions.forEach((profession) => {
+//     });
 
-}
+// }
 
 const questions =[
     {
