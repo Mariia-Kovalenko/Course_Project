@@ -13,7 +13,7 @@ let shuffledQuestions;
 let currentQuestionIndex;
 let questionType;
 
-let professions = [
+export let professions = [
     {
         //prof[0]
         profession: "Designer",
@@ -219,12 +219,20 @@ let professions = [
 
 ];
 
-startButton.addEventListener('click', startTest);
-nextButton.addEventListener('click', () => {
+
+
+if(startButton){
+    startButton.addEventListener('click', startTest);
+}
+if(nextButton){
+    nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
-});
-completeButton.addEventListener('click', calculatePoints);
+    });
+}
+if(completeButton){
+    completeButton.addEventListener('click', calculatePoints);
+}
 
 
 function startTest(){
@@ -513,8 +521,9 @@ function calculatePoints(){
         profession.score += sum;
         console.log(`Points for profession ${profession.profession}: ${profession.score}`);
     });
-    
-    setProgress(0, professions[0].score);
+    professions = professions.sort(compare);
+    console.log(professions);
+    //window.location.href = 'results.html';
 }
 
 
@@ -531,6 +540,11 @@ function sortProfessions(){
     //console.log(`Your profession is ${yourProfession} with points ${maxScore}`);
 }
 
+function compare(a, b){
+    if (a.score > b.score) return -1;
+    if (a.score < b.score) return 1;
+    return 0;
+}
 
 // function showResults(professions){
 //     window.location.href = 'results.html';
