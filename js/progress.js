@@ -1,7 +1,5 @@
 "use strict";
 
-import { professions } from "./main.js";
-console.log(professions);
 
 const circle = document.querySelectorAll('.progect-ring__circle');
 const percentage = document.querySelectorAll('.percentage');

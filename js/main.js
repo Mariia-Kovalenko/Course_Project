@@ -8,12 +8,24 @@ const questionElement = document.getElementById('question');
 const answerButtonElement  = document.getElementById('answer-buttons');
 const headingElement = document.getElementById('heading');
 
+//----progress bars
+const circle = document.querySelectorAll('.progect-ring__circle');
+const percentage = document.querySelectorAll('.percentage');
+const professionName = document.querySelectorAll('.profession');
+const radius = 30;
+const circumference = 2* Math.PI * radius;
+
+const againButton = document.getElementById('againButton');
+const tomainButton = document.getElementById('toMainButton');
+const resultsContainer = document.querySelector('.results__container');
+const testContainer = document.querySelector('.test__container');
+const headingForTest = document.querySelector('.describ__heading');
 
 let shuffledQuestions; 
 let currentQuestionIndex;
 let questionType;
 
-export let professions = [
+let professions = [
     {
         //prof[0]
         profession: "Designer",
@@ -233,6 +245,12 @@ if(nextButton){
 if(completeButton){
     completeButton.addEventListener('click', calculatePoints);
 }
+if(againButton){
+    againButton.addEventListener('click', restart);
+}
+if(toMainButton){
+    // toMainButton.addEventListener('click', window.location.href = 'index.html');
+}
 
 
 function startTest(){
@@ -300,7 +318,12 @@ function selectAnswer(e){
     }
 }
 
-
+function restart(){
+    for (let i=0; i< questions.length; i++){
+        questions[i].score = 0;
+    }
+    document.location.reload();
+}
 
 function completeCareer(qType, points){
     
@@ -512,6 +535,32 @@ function completeCareer(qType, points){
 }
 
 
+///--- functions for showing results
+
+function drawCircles(){
+    for(let i = 0; i < circle.length; i++){
+        //console.log(circle.item(i));
+        circle.item(i).style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.item(i).style.strokeDashoffset = circumference;
+    }
+}
+
+function setProgress(index, percent){
+    const offset = circumference - percent / 100 * circumference;
+    circle.item(index).style.strokeDashoffset = offset;
+    percentage.item(index).innerHTML = `${percent}%`;
+}
+
+function showResults(){
+    for (let i = 0; i < 6; i++){
+        setProgress(i, professions[i].score);
+        professionName.item(i).innerHTML = professions[i].profession;
+    }
+}
+
+
+// ----- calculationg points and showing results
+
 function calculatePoints(){
     professions.forEach((profession) =>{
         let sum = 0;
@@ -522,8 +571,12 @@ function calculatePoints(){
         console.log(`Points for profession ${profession.profession}: ${profession.score}`);
     });
     professions = professions.sort(compare);
-    console.log(professions);
-    //window.location.href = 'results.html';
+    testContainer.classList.add('hide');
+    resultsContainer.classList.remove('hide');
+    headingForTest.innerText = 'Ваші результати';
+    // console.log(professions);
+    drawCircles();
+    showResults();
 }
 
 
@@ -546,12 +599,6 @@ function compare(a, b){
     return 0;
 }
 
-// function showResults(professions){
-//     window.location.href = 'results.html';
-//     professions.forEach((profession) => {
-//     });
-
-// }
 
 const questions =[
     {
